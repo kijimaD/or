@@ -1,17 +1,17 @@
 <!DOCTYPE HTML>
-<html lang="ja" class="sidebar-visible no-js light">
+<html lang="ja" class="light" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title></title>
-        <meta name="robots" content="noindex" />
+        <meta name="robots" content="noindex">
 
 
         <!-- Custom HTML head -->
         
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="icon" href="favicon.svg">
         <link rel="shortcut icon" href="favicon.png">
@@ -32,7 +32,7 @@
         <!-- Custom theme stylesheets -->
 
     </head>
-    <body>
+    <body class="sidebar-visible no-js">
     <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
@@ -62,31 +62,38 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
-            html.classList.remove('no-js')
             html.classList.remove('light')
             html.classList.add(theme);
-            html.classList.add('js');
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
         </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var html = document.querySelector('html');
+            var body = document.querySelector('body');
             var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
                 <ol class="chapter"><li class="chapter-item expanded "><a href="abstruct.html"><strong aria-hidden="true">1.</strong> この本の概要</a></li><li class="chapter-item expanded "><a href="origuchiriver.html"><strong aria-hidden="true">2.</strong> 折口川クロニクル</a></li><li class="chapter-item expanded "><a href="origuchisea.html"><strong aria-hidden="true">3.</strong> 海岸のできごと</a></li><li class="chapter-item expanded "><a href="rail.html"><strong aria-hidden="true">4.</strong> 鉄道ばなし</a></li><li class="chapter-item expanded "><a href="road.html"><strong aria-hidden="true">5.</strong> 道路ばなし</a></li><li class="chapter-item expanded "><a href="simplemap.html"><strong aria-hidden="true">6.</strong> 地図を描く</a></li><li class="chapter-item expanded "><a href="seven.html"><strong aria-hidden="true">7.</strong> 七不思議</a></li><li class="chapter-item expanded "><a href="cliff.html"><strong aria-hidden="true">8.</strong> 岸壁これくしょん</a></li><li class="chapter-item expanded "><a href="war.html"><strong aria-hidden="true">9.</strong> 戦争</a></li><li class="chapter-item expanded "><a href="memo.html"><strong aria-hidden="true">10.</strong> メモ</a></li></ol>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
         </nav>
 
         <!-- Track and set sidebar scroll position -->
@@ -117,9 +124,9 @@
                                 <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
+                        </label>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
@@ -216,14 +223,78 @@
 <div style="break-before: page; page-break-before: always;"></div><h1 id="戦争"><a class="header" href="#戦争">戦争</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="メモ"><a class="header" href="#メモ">メモ</a></h1>
 <p>阿久根市折口</p>
+<h2 id="人口"><a class="header" href="#人口">人口</a></h2>
+<p>昭和28年(1953)5月の学校ごとの人数</p>
+<p><img src="./images/20230812population.png" alt="image" /></p>
+<p>各学校の人数。多い。今とは全然異なる。特に大川が多いのが不思議。薩摩街道だったためか? まだ三笠町は合併してないので記載はない。</p>
+<p><img src="./images/20230813population.png" alt="image" /></p>
+<h2 id="道路"><a class="header" href="#道路">道路</a></h2>
+<p><a href="https://ja.wikipedia.org/wiki/%E9%B9%BF%E5%85%90%E5%B3%B6%E7%9C%8C%E9%81%93365%E5%8F%B7%E8%84%87%E6%9C%AC%E8%B5%A4%E7%80%AC%E5%B7%9D%E7%B7%9A">鹿児島県道365号脇本赤瀬川線 - Wikipedia</a></p>
+<ul>
+<li>1989年（平成元年）3月29日 - 鹿児島県告示第696号により「鹿児島県道365号折口陣之尾線」が廃止され、告示697号により鹿児島県道365号脇本赤瀬川線として認定される</li>
+<li>現在の国道389号が開通するまではこの鹿児島県道365号脇本赤瀬川線を国道389号としていた
+<ul>
+<li>1987年脇本バイパスと呼ばれる区間が開通
+<ul>
+<li>開通時の記事</li>
+<li>広報あくね490号 https://www.city.akune.lg.jp/material/files/group/67/kohoS6211.pdf</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="時代の変遷"><a class="header" href="#時代の変遷">時代の変遷</a></h2>
+<p>折口地区は、時代の変遷とともに役割を変えてきた。</p>
+<h3 id="江戸時代-元禄16881704年"><a class="header" href="#江戸時代-元禄16881704年">江戸時代 元禄(=1688〜1704年)</a></h3>
+<p>干拓前。</p>
+<p><img src="./images/20231202edo.png" alt="image" /></p>
+<p>↑<a href="https://www.digital.archives.go.jp/DAS/pickup/view/detail/detailArchives/0301000000/0000000231/00">薩摩国(元禄)</a>より。田島は本当に島だった。</p>
+<p><img src="./images/20231202sea.png" alt="image" /></p>
+<p>↑現在の標高別地図。だいたい一致する。地理院地図より作成。</p>
+<p>周辺で育った人なら聞く話しだが、折口地区は一面が海だった。土を掘ると貝殻が出てくる話とセットで語られる。そして地域名の由来は、「海への降り口」である。海でなくなったのは人為的なもので、割と最近であった。</p>
 <blockquote>
 <p>多田村の西に位置し、地元では「おいぐち」とも発音する。西は海（東シナ海）に面し、西流する折口川が注ぐ。南は赤瀬川村、北西は出水郷西目村。折口川河口の入江を折口浜とよぶ。かつてこの入江は折口川をさかのぼって多田村辺りまで入り込み、多田浦とよばれていた。元禄年中（一六八八―一七〇四）この浦の干拓が進み、開発地を中心として多田村から分れた村が当村という（阿久根町郷土誌）。</p>
 </blockquote>
-<h2 id="人口"><a class="header" href="#人口">人口</a></h2>
-<p>昭和28年(1953)5月の学校ごとの人数</p>
-<p><img src="./images/20230812population.png" alt="" /></p>
-<p>各学校の人数。多い。今とは全然異なる。特に大川が多いのが不思議。まだ三笠町は合併してないので記載はない。</p>
-<p><img src="./images/20230813population.png" alt="" /></p>
+<h3 id="明治時代"><a class="header" href="#明治時代">明治時代</a></h3>
+<p>干拓後。</p>
+<p><img src="./images/20231202saikai.png" alt="image" /></p>
+<p>↑<a href="https://sagalibdb.jp/iiifviewer/?uid=02000035">西海道全圖</a> 1877年 陸軍参謀局</p>
+<ul>
+<li><a href="http://www.aobane.com/books/390">西海道全図</a>の概要</li>
+<li>主要道が阿久根〜野田、阿久根〜脇本になっている。現在残っている感じから見る限り、規格の高くない道で自動車のための道ではない</li>
+<li>現在の地名とほぼ同じ</li>
+<li>現在の国道3号線にあたる道は存在しないか、主要道ではない</li>
+</ul>
+<h3 id="昭和時代前"><a class="header" href="#昭和時代前">昭和時代(前)</a></h3>
+<p><img src="./images/20231202showa.png" alt="image" /></p>
+<p>↑<a href="https://purl.stanford.edu/kq741wk9448">五万分一地形圖</a> 明治34年測量、昭和10年修正</p>
+<ul>
+<li>鹿児島本線の折口駅が開業した(1923年)
+<ul>
+<li>傾斜とトンネルを避けて海側を通した?</li>
+</ul>
+</li>
+<li>現在の国道3号と同じ位置に道路ができた
+<ul>
+<li>折口は阿久根脇本間道路と、国道3号間の連絡路となった</li>
+</ul>
+</li>
+</ul>
+<h3 id="昭和時代後"><a class="header" href="#昭和時代後">昭和時代(後)</a></h3>
+<ul>
+<li>戦後土地改良工事が行われ折口川が直線化した
+<ul>
+<li>同時期に橋がいくつかかけられた</li>
+</ul>
+</li>
+</ul>
+<h3 id="平成"><a class="header" href="#平成">平成</a></h3>
+<p>脇本バイパスが完成した。新設されたバイパスに国道389号があてられ、今まで国道389号だった道路を県道365号に降格。</p>
+<p><img src="./images/20231203route.png" alt="image" /> <a href="https://www.city.akune.lg.jp/material/files/group/67/kohoS6211.pdf">広報あくね490号</a>より</p>
+<ul>
+<li>旧国道389号線には鉄道との平面交差、狭隘区間があり、脇本地区の物資輸送の妨げとなっていた</li>
+</ul>
+<p>南九州西回り自動車道のインターチェンジが設置された。北薩横断道路の終点として設定された(未定)。</p>
 <h2 id="観光"><a class="header" href="#観光">観光</a></h2>
 <p>大島キャンプ場の人数。重視していたことがわかる。</p>
 <p><img src="./images/20230813oshima.png" alt="" /></p>
@@ -247,9 +318,8 @@
 <p><img src="./images/20230813jino.png" alt="" /></p>
 <p>折多地区土地改良工事中の貴重な写真。ぐちゃぐちゃ。どのへんか不明。</p>
 <p><img src="./images/20230813orita.png" alt="" /></p>
-<p>土地改良記念碑は折多小学校の校庭の片隅に現在もある。ただ画像とは違うようにも見える。現在の記念碑は土台に2つ立っているような気がする。画像では1つしかない。</p>
 <ul>
-<li>平地が少ないなかで、数少ない田園地帯だった。戦後最優先で建設されたように見える</li>
+<li>阿久根市には平地が少ない。増産の余地のある数少ない田園地帯の1つだった。戦後最優先で建設されたように見える</li>
 <li>折口川の流路が大きく変わった。以前は蛇行していて、河口付近でふた手に分かれていた。現在は1つになっている
 <ul>
 <li>1940年代の航空写真で確認できる</li>
@@ -277,6 +347,9 @@
 阿久根市誌(昭和49年刊)1020頁にある言い伝えによれば、建久三年(一一九二)鎌倉幕府の命により、山門院に下向した田上資一が氏神として建立したものといわれている。棟札には「慶長十六亥八月十四日大檀那藤原義虎公　子孫繁昌…」と記されている。
 出水風土誌(大正4年刊,昭和51年復刻)523頁によれば　建久三年三月鎌倉の命に依り山門院筒田郷に下向した、上出水村武本田上氏の始祖田江資一(四代目より田上を名乗る)が氏神として創建す。当社の傍らに船形の巨岩あり。田上隠岐守漂着の軍用船化石なり。地理纂考に曰く往古漂着せし唐船の化石であると。</p>
 </blockquote>
+<ul>
+<li>民話 広報あくね460号 https://www.city.akune.lg.jp/material/files/group/67/kohoS6005.pdf</li>
+</ul>
 <h2 id="地図"><a class="header" href="#地図">地図</a></h2>
 <p>埋め立てる前の地図。砂浜が町のすぐそばに広がっていたことが確認できる。北部ではまだ橋ができていないので、鉄道と国道が立体交差していない。</p>
 <p><img src="./images/20230813map.png" alt="" /></p>
