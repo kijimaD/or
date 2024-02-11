@@ -1,5 +1,6 @@
 [book]
-authors = []
+authors = ["貴島"]
 language = "ja"
 multilingual = false
 src = "src"
+title = "📜 ORiguchi Documents"
