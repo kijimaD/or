@@ -11,6 +11,7 @@
 - 書籍
   - 阿久根市誌
   - [広報あくね](https://www.city.akune.lg.jp/shiseijoho/koho/kohoakune/index.html)
+  - [阿久根町郷土史](https://dl.ndl.go.jp/pid/1186448/1/292)
 - [地理院地図](https://maps.gsi.go.jp/#15/32.061555/130.227513/&base=ort&ls=ort%7Cd1-no988%7Crelief%7Cpp&blend=01&disp=1001&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)
 - [スタンフォード大の日本古地図](https://stanford.maps.arcgis.com/apps/SimpleViewer/index.html?appid=733446cc5a314ddf85c59ecc10321b41)
 - その他インターネット
