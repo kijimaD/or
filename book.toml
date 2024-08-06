@@ -4,3 +4,7 @@ language = "ja"
 multilingual = false
 src = "src"
 title = "📜 ORiguchi Documents"
+
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html"]
