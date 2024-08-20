@@ -232,3 +232,7 @@
 - [Mirador](https://www.hi.u-tokyo.ac.jp/collection/digitalgallery/ryukyu_miyakonojo/mirador/?manifest=https://www.hi.u-tokyo.ac.jp/collection/digitalgallery/ryukyu_miyakonojo/iiif/zen/manifest.json)
 - [改正鹿児島県地誌略 上](https://dl.ndl.go.jp/pid/766586)
   - https://dl.ndl.go.jp/pid/766586/1/39
+
+## 海岸
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6wqgxvOMQkc?si=w8sMDG5nyVX6KEdt&amp;start=193" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
