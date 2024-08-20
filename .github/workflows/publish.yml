@@ -21,6 +21,7 @@ jobs:
 
       - name: Build docs
         run: |
+          cargo install mdbook mdbook-toc
           mdbook build
 
       - name: Deploy
