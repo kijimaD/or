@@ -223,3 +223,12 @@
 ## 折口の盆踊り
 
 折口三文字で、地区の盆踊りがあったという。2024年時点で58歳の人が、中学生ぐらいのころあったという。現在はない。
+
+## 地図
+
+- [大隅 日向 薩摩 肥後 \| 古地図コレクション（古地図資料閲覧サービス）](https://kochizu.gsi.go.jp/items/501)
+- [産総研 地質調査総合センター：地質図カタログ](https://www.gsj.jp/Map/JP/geology2-6.html#Yatsushiro-Nomozaki)
+- [Satsuma kokusei saikenzu: tsuketari ryakushi; Kashihara Yoshinaga seizu\. in EarthWorks](https://earthworks.stanford.edu/catalog/56c239d0-2b79-473d-9316-29d7dd519e3e)
+- [Mirador](https://www.hi.u-tokyo.ac.jp/collection/digitalgallery/ryukyu_miyakonojo/mirador/?manifest=https://www.hi.u-tokyo.ac.jp/collection/digitalgallery/ryukyu_miyakonojo/iiif/zen/manifest.json)
+- [改正鹿児島県地誌略 上](https://dl.ndl.go.jp/pid/766586)
+  - https://dl.ndl.go.jp/pid/766586/1/39

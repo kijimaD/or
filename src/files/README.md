@@ -1,0 +1,6 @@
+- <20240820jinno.pdf> `陣之尾遺跡・陣之尾塁跡上野畑遺跡・広段遺跡北山田遺跡` https://sitereports.nabunken.go.jp/files/attach_mobile/31/31095/22617_1_%E9%99%A3%E4%B9%8B%E5%B0%BE%E9%81%BA%E8%B7%A1%E3%83%BB%E9%99%A3%E4%B9%8B%E5%B0%BE%E5%A1%81%E8%B7%A1%E4%B8%8A%E9%87%8E%E7%95%91%E9%81%BA%E8%B7%A1%E3%83%BB%E5%BA%83%E6%AE%B5%E9%81%BA%E8%B7%A1%E5%8C%97%E5%B1%B1%E7%94%B0%E9%81%BA%E8%B7%A1.pdf
+- <20240820kogyo17.pdf> `鹿児島県工業試験場(1962 第9号)` https://www.kagoshima-it.jp/pdf/kenkyu_report/i_report_1962_17.pdf
+- <20240820kogyo21.pdf> `鹿児島県工業試験場(1962 第9号)` https://www.kagoshima-it.jp/pdf/kenkyu_report/i_report_1962_21.pdf
+- <20240820kyoryo.pdf> `橋梁資料` https://www.nakanihon.co.jp/gijyutsu/Shimada/BridgeData/f46KG.pdf
+- <20240820mamorou.pdf> `生活排水対策パンフレット` https://www.city-kirishima.jp/kankyo/kurashi/kankyo/suishitsuhozen/documents/minnnademamorouutukusiikawayaumi.pdf
+- <20240820tochibunrui.pdf> `土地分類基本調査` https://nlftp.mlit.go.jp/kokjo/tochimizu/F3/data/pdf/4622t.pdf
