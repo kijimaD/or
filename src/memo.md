@@ -236,3 +236,7 @@
 ## 海岸
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6wqgxvOMQkc?si=w8sMDG5nyVX6KEdt&amp;start=193" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## 海蝕洞
+
+潮位29だと余裕で入れる。
