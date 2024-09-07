@@ -28,7 +28,7 @@
 
 ![](./images/20230813oshima.png)
 
-昭和27年の観光の人数。県で1位だったとのこと(何をもってかわからないが…)。鹿児島県内の旅行先によく選ばれていた時期があると聞いたことがある。
+昭和27年の観光の人数。県で1位だったとのこと。鹿児島県内の旅行先によく選ばれていた時期があると聞いたことがある。
 
 ![](./images/20230813kanko.png)
 
@@ -225,15 +225,6 @@
 
 折口三文字で、地区の盆踊りがあったという。2024年時点で58歳の人が、中学生ぐらいのころあったという。現在はない。
 
-## 地図
-
-- [大隅 日向 薩摩 肥後 \| 古地図コレクション（古地図資料閲覧サービス）](https://kochizu.gsi.go.jp/items/501)
-- [産総研 地質調査総合センター：地質図カタログ](https://www.gsj.jp/Map/JP/geology2-6.html#Yatsushiro-Nomozaki)
-- [Satsuma kokusei saikenzu: tsuketari ryakushi; Kashihara Yoshinaga seizu\. in EarthWorks](https://earthworks.stanford.edu/catalog/56c239d0-2b79-473d-9316-29d7dd519e3e)
-- [Mirador](https://www.hi.u-tokyo.ac.jp/collection/digitalgallery/ryukyu_miyakonojo/mirador/?manifest=https://www.hi.u-tokyo.ac.jp/collection/digitalgallery/ryukyu_miyakonojo/iiif/zen/manifest.json)
-- [改正鹿児島県地誌略 上](https://dl.ndl.go.jp/pid/766586)
-  - https://dl.ndl.go.jp/pid/766586/1/39
-
 ## 海岸
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6wqgxvOMQkc?si=w8sMDG5nyVX6KEdt&amp;start=193" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -241,3 +232,11 @@
 ## 海蝕洞
 
 潮位29だと余裕で入れる。
+
+## 旧橋跡
+
+- 1960年代にかかっていた
+- 近くの里道改修記念碑と関係あるか
+- 現橋の南側にかかっている
+
+<https://maps.gsi.go.jp/#18/32.062364/130.212933/&base=ort&ls=ort%7Cgsi-compare-photo%7Cpp&blend=0&disp=111&lcd=gsi-compare-photo&vs=c1g1j0h0k0l0u0t0z0r0s0m1f1&d=m&base2=ort&ls2=ort%7Cgsi-compare-photo&blend2=0&disp2=11&lcd2=gsi-compare-photo>

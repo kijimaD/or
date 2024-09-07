@@ -6,6 +6,8 @@
 
 郷土([鹿児島県阿久根市](https://maps.app.goo.gl/PvxRiVGu2V33KGfZ8)、特に折口地区)関連のメモ。
 
+- [一覧地図](https://www.google.com/maps/d/edit?mid=15EjRvNrXLlswurhyHu9rL29WfPbhKyS9&ll=32.02910094176896%2C130.21503978009713&z=14)
+
 ## 背景
 
 故郷を離れてから、生まれ育った場所について何も知らなかったことに気づき、調べるようになった。調べるにつれて、見慣れた景色はゆるやかな変遷によって形成されて今を形作っていることを知った。長い歴史の中で住民全員が悲願した出来事、悲しい出来事が確かにあった。教科書で読む現実感のない出来事より、近しい場所で起きたささいな出来事や風景の変化が、歴史をより身近に感じさせた。長閑で退屈と感じていた風景は見え方が変わった。
@@ -35,8 +37,14 @@
 - [『大日本管轄分地図 鹿児島県管内全図』明示27年](https://adeac.jp/iwasebunko/viewer/mp01968400/902-115-00-46)
 - [『国郡全図』](https://websv.aichi-pref-library.jp/wahon/detail/208.html)
 - [『三国名勝図会』](https://dc.lib.kagoshima-u.ac.jp/ja/search/display/0106180001)
-- [地理院地図](https://maps.gsi.go.jp/#15/32.061555/130.227513/&base=ort&ls=ort%7Cd1-no988%7Crelief%7Cpp&blend=01&disp=1001&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)
+- [地理院地図 阿久根](https://maps.gsi.go.jp/#15/32.061555/130.227513/&base=ort&ls=ort%7Cd1-no988%7Crelief%7Cpp&blend=01&disp=1001&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1&d=m)
 - [スタンフォード大の日本古地図](https://stanford.maps.arcgis.com/apps/SimpleViewer/index.html?appid=733446cc5a314ddf85c59ecc10321b41)
+- [大隅 日向 薩摩 肥後 \| 古地図コレクション（古地図資料閲覧サービス）](https://kochizu.gsi.go.jp/items/501)
+- [産総研 地質調査総合センター：地質図カタログ](https://www.gsj.jp/Map/JP/geology2-6.html#Yatsushiro-Nomozaki)
+- [薩摩国政全図](https://earthworks.stanford.edu/catalog/56c239d0-2b79-473d-9316-29d7dd519e3e)
+- [島津家御領内全図](https://www.hi.u-tokyo.ac.jp/collection/digitalgallery/ryukyu_miyakonojo/mirador/?manifest=https://www.hi.u-tokyo.ac.jp/collection/digitalgallery/ryukyu_miyakonojo/iiif/zen/manifest.json)
+- [改正鹿児島県地誌略 上](https://dl.ndl.go.jp/pid/766586)
+  - [阿久根のページ](https://dl.ndl.go.jp/pid/766586/1/39)
 - 『阿久根市誌』
 - 『阿久根の自然』
 - 『出水・阿久根・大口の100年』
