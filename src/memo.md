@@ -233,10 +233,20 @@
 
 潮位29だと余裕で入れる。
 
-## 旧橋跡
+## 旧田島橋跡
 
 - 1960年代にかかっていた
 - 近くの里道改修記念碑と関係あるか
-- 現橋の南側にかかっている
+- 現橋の南側にかかっていたように見える
 
 <https://maps.gsi.go.jp/#18/32.062364/130.212933/&base=ort&ls=ort%7Cgsi-compare-photo%7Cpp&blend=0&disp=111&lcd=gsi-compare-photo&vs=c1g1j0h0k0l0u0t0z0r0s0m1f1&d=m&base2=ort&ls2=ort%7Cgsi-compare-photo&blend2=0&disp2=11&lcd2=gsi-compare-photo>
+
+## 折多小学校前の旧道跡
+
+現在広い歩道がある箇所に国道3号があった。
+
+- 現在はややカーブしている
+- 曲がり道の角度が大きく、ゆるやかになっている
+- 現在は小学校前の歩道、水路、バス停がある
+
+<https://maps.gsi.go.jp/#18/32.059659/130.222862/&base=ort&ls=ort&disp=1&vs=c1g1j0h0k0l0u0t0z0r0s0m1f1&d=m&base2=ort&ls2=ort%7Cgsi-compare-photo&blend2=0&disp2=11&lcd2=gsi-compare-photo>
