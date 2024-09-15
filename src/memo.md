@@ -209,6 +209,12 @@
 
 ## 学校
 
+```
+第七項 折多尋常小学校
+
+本校は折口駅を東にへだてる約56町国道に沿いて交通は便なれども部落に遠ざかり児童の通学には距離の遠きに失す。初め多田に簡易科小学校折口に折口簡易小学校在りしが明治26年両校を合併し中央なる折口字岩掛に校舎を建設し同年十月落成せり即折口多田の頭字を採りて折多尋常小学校と命名せしなり。義務教育の延長後地校校舎狭隘を告げ仮小屋三棟を以て一時其の急を補いしが大正三年度より敷地の拡張を図り大正四年10月校舎新築落成せり。
+```
+
 『阿久根町郷土史』417ページから。
 
 折多尋常小学校。現在の位置に移った経緯。
@@ -261,3 +267,11 @@
 ```
 
 今と同じ。
+
+## トンネル内で分岐・合流する
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pALvLZjhqoc?si=gmuUD5dLb2yeHSYA&amp;start=1908" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## 坂を登る道
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pALvLZjhqoc?si=1sRfaPJhEMy259Fp&amp;start=876" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
