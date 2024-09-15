@@ -4,7 +4,7 @@
 
 ## 概要
 
-郷土([鹿児島県阿久根市](https://maps.app.goo.gl/PvxRiVGu2V33KGfZ8)、特に折口地区)関連のメモ。
+ORDは[鹿児島県阿久根市](https://maps.app.goo.gl/PvxRiVGu2V33KGfZ8)折口地区、および周辺地域に関するメモである。
 
 ## 背景
 
@@ -27,6 +27,8 @@
 ## 構築
 
 各エントリはナンバリングし、1つのアイデアを表現するものとする。後で再構築してまとめやすいようにする。
+
+## 地図で見る
 
 <iframe src="https://www.google.com/maps/d/embed?mid=15EjRvNrXLlswurhyHu9rL29WfPbhKyS9&ehbc=2E312F" width="640" height="480"></iframe>
 

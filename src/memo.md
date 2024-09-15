@@ -250,3 +250,14 @@
 - 現在は小学校前の歩道、水路、バス停がある
 
 <https://maps.gsi.go.jp/#18/32.059659/130.222862/&base=ort&ls=ort&disp=1&vs=c1g1j0h0k0l0u0t0z0r0s0m1f1&d=m&base2=ort&ls2=ort%7Cgsi-compare-photo&blend2=0&disp2=11&lcd2=gsi-compare-photo>
+
+## 折口港
+
+```
+二、折口港
+折口川の河口にあり。水浅く河口狭きを以て大船を泊すべからず。只僅に漁船の繋船に便す。
+
+『阿久根町郷土史』11ページから
+```
+
+今と同じ。
