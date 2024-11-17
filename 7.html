@@ -1,13 +1,13 @@
 <!DOCTYPE HTML>
-<html lang="ja" class="light" dir="ltr">
+<html lang="ja" class="light sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>ORD 7: 鍋石を検分する - 📜 ORiguchi Documents</title>
+        <title>ORD 7: 鍋石を観察する - 📜 ORiguchi Documents</title>
 
 
         <!-- Custom HTML head -->
-        
+
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
@@ -30,15 +30,17 @@
 
         <!-- Custom theme stylesheets -->
 
-    </head>
-    <body class="sidebar-visible no-js">
-    <div id="body-container">
+
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
-
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
             try {
@@ -60,19 +62,16 @@
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
+            const html = document.documentElement;
             html.classList.remove('light')
             html.classList.add(theme);
-            var body = document.querySelector('body');
-            body.classList.remove('no-js')
-            body.classList.add('js');
+            html.classList.add("js");
         </script>
 
         <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var body = document.querySelector('body');
             var sidebar = null;
             var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
@@ -82,45 +81,25 @@
                 sidebar = 'hidden';
             }
             sidebar_toggle.checked = sidebar === 'visible';
-            body.classList.remove('sidebar-visible');
-            body.classList.add("sidebar-" + sidebar);
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">この本の概要</a></li><li class="chapter-item expanded affix "><li class="part-title">Summary</li><li class="chapter-item expanded "><a href="1.html"><strong aria-hidden="true">1.</strong> ORD 1: 地域の区分</a></li><li class="chapter-item expanded "><a href="2.html"><strong aria-hidden="true">2.</strong> ORD 2: 折口の干拓を標高図で確認する</a></li><li class="chapter-item expanded "><a href="3.html"><strong aria-hidden="true">3.</strong> ORD 3: 折口の交通の変遷</a></li><li class="chapter-item expanded "><a href="4.html"><strong aria-hidden="true">4.</strong> ORD 4: 折口川</a></li><li class="chapter-item expanded "><a href="5.html"><strong aria-hidden="true">5.</strong> ORD 5: 折口海岸</a></li><li class="chapter-item expanded "><a href="6.html"><strong aria-hidden="true">6.</strong> ORD 6: JR時代の阿久根駅の時刻表</a></li><li class="chapter-item expanded "><a href="7.html" class="active"><strong aria-hidden="true">7.</strong> ORD 7: 鍋石を検分する</a></li><li class="chapter-item expanded "><a href="8.html"><strong aria-hidden="true">8.</strong> ORD 8: 折口の名前の由来</a></li><li class="chapter-item expanded "><a href="9.html"><strong aria-hidden="true">9.</strong> ORD 9: 鍋石にある伊勢神社を検分する</a></li><li class="chapter-item expanded "><a href="10.html"><strong aria-hidden="true">10.</strong> ORD 10: 折口海岸の堆積</a></li><li class="chapter-item expanded "><a href="11.html"><strong aria-hidden="true">11.</strong> ORD 11: 岩船</a></li><li class="chapter-item expanded "><a href="12.html"><strong aria-hidden="true">12.</strong> ORD 12: 『阿久根の空襲』</a></li><li class="chapter-item expanded "><a href="13.html"><strong aria-hidden="true">13.</strong> ORD 13: 『出水・阿久根・大口の100年』</a></li><li class="chapter-item expanded "><a href="14.html"><strong aria-hidden="true">14.</strong> ORD 14: 『阿久根の自然』</a></li><li class="chapter-item expanded "><a href="15.html"><strong aria-hidden="true">15.</strong> ORD 15: 旧陣之尾橋</a></li><li class="chapter-item expanded "><a href="16.html"><strong aria-hidden="true">16.</strong> ORD 16: 中津浜海岸沖にある人工物(中津浜ミミミミ)</a></li><li class="chapter-item expanded "><a href="17.html"><strong aria-hidden="true">17.</strong> ORD 17: 中津浜海岸近くにある2つの橋台(中津浜ブリッジブラザーズ)</a></li><li class="chapter-item expanded "><a href="18.html"><strong aria-hidden="true">18.</strong> ORD 18: 『雄飛 創立百周年記念誌 阿久根市立折多小学校』</a></li><li class="chapter-item expanded "><a href="19.html"><strong aria-hidden="true">19.</strong> ORD 19: 岩船の埋没地点</a></li><li class="chapter-item expanded "><a href="20.html"><strong aria-hidden="true">20.</strong> ORD 20: 牟田の海蝕洞</a></li><li class="chapter-item expanded "><a href="memo.html"><strong aria-hidden="true">21.</strong> メモ</a></li></ol>
-            </div>
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
             </div>
         </nav>
 
-        <!-- Track and set sidebar scroll position -->
-        <script>
-            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
-            sidebarScrollbox.addEventListener('click', function(e) {
-                if (e.target.tagName === 'A') {
-                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
-                }
-            }, { passive: true });
-            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
-            sessionStorage.removeItem('sidebar-scroll');
-            if (sidebarScrollTop) {
-                // preserve sidebar scroll position when navigating via links within sidebar
-                sidebarScrollbox.scrollTop = sidebarScrollTop;
-            } else {
-                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
-                var activeSection = document.querySelector('#sidebar .active');
-                if (activeSection) {
-                    activeSection.scrollIntoView({ block: 'center' });
-                }
-            }
-        </script>
-
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
@@ -173,7 +152,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="ord-7-鍋石を検分する"><a class="header" href="#ord-7-鍋石を検分する">ORD 7: 鍋石を検分する</a></h1>
+                        <h1 id="ord-7-鍋石を観察する"><a class="header" href="#ord-7-鍋石を観察する">ORD 7: 鍋石を観察する</a></h1>
 <ul>
 <li><a href="#%E9%8D%8B%E7%9F%B3">鍋石</a></li>
 </ul>

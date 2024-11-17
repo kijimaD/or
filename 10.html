@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="ja" class="light" dir="ltr">
+<html lang="ja" class="light sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -7,7 +7,7 @@
 
 
         <!-- Custom HTML head -->
-        
+
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
@@ -30,15 +30,17 @@
 
         <!-- Custom theme stylesheets -->
 
-    </head>
-    <body class="sidebar-visible no-js">
-    <div id="body-container">
+
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
-
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
             try {
@@ -60,19 +62,16 @@
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
+            const html = document.documentElement;
             html.classList.remove('light')
             html.classList.add(theme);
-            var body = document.querySelector('body');
-            body.classList.remove('no-js')
-            body.classList.add('js');
+            html.classList.add("js");
         </script>
 
         <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var body = document.querySelector('body');
             var sidebar = null;
             var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
@@ -82,45 +81,25 @@
                 sidebar = 'hidden';
             }
             sidebar_toggle.checked = sidebar === 'visible';
-            body.classList.remove('sidebar-visible');
-            body.classList.add("sidebar-" + sidebar);
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">この本の概要</a></li><li class="chapter-item expanded affix "><li class="part-title">Summary</li><li class="chapter-item expanded "><a href="1.html"><strong aria-hidden="true">1.</strong> ORD 1: 地域の区分</a></li><li class="chapter-item expanded "><a href="2.html"><strong aria-hidden="true">2.</strong> ORD 2: 折口の干拓を標高図で確認する</a></li><li class="chapter-item expanded "><a href="3.html"><strong aria-hidden="true">3.</strong> ORD 3: 折口の交通の変遷</a></li><li class="chapter-item expanded "><a href="4.html"><strong aria-hidden="true">4.</strong> ORD 4: 折口川</a></li><li class="chapter-item expanded "><a href="5.html"><strong aria-hidden="true">5.</strong> ORD 5: 折口海岸</a></li><li class="chapter-item expanded "><a href="6.html"><strong aria-hidden="true">6.</strong> ORD 6: JR時代の阿久根駅の時刻表</a></li><li class="chapter-item expanded "><a href="7.html"><strong aria-hidden="true">7.</strong> ORD 7: 鍋石を検分する</a></li><li class="chapter-item expanded "><a href="8.html"><strong aria-hidden="true">8.</strong> ORD 8: 折口の名前の由来</a></li><li class="chapter-item expanded "><a href="9.html"><strong aria-hidden="true">9.</strong> ORD 9: 鍋石にある伊勢神社を検分する</a></li><li class="chapter-item expanded "><a href="10.html" class="active"><strong aria-hidden="true">10.</strong> ORD 10: 折口海岸の堆積</a></li><li class="chapter-item expanded "><a href="11.html"><strong aria-hidden="true">11.</strong> ORD 11: 岩船</a></li><li class="chapter-item expanded "><a href="12.html"><strong aria-hidden="true">12.</strong> ORD 12: 『阿久根の空襲』</a></li><li class="chapter-item expanded "><a href="13.html"><strong aria-hidden="true">13.</strong> ORD 13: 『出水・阿久根・大口の100年』</a></li><li class="chapter-item expanded "><a href="14.html"><strong aria-hidden="true">14.</strong> ORD 14: 『阿久根の自然』</a></li><li class="chapter-item expanded "><a href="15.html"><strong aria-hidden="true">15.</strong> ORD 15: 旧陣之尾橋</a></li><li class="chapter-item expanded "><a href="16.html"><strong aria-hidden="true">16.</strong> ORD 16: 中津浜海岸沖にある人工物(中津浜ミミミミ)</a></li><li class="chapter-item expanded "><a href="17.html"><strong aria-hidden="true">17.</strong> ORD 17: 中津浜海岸近くにある2つの橋台(中津浜ブリッジブラザーズ)</a></li><li class="chapter-item expanded "><a href="18.html"><strong aria-hidden="true">18.</strong> ORD 18: 『雄飛 創立百周年記念誌 阿久根市立折多小学校』</a></li><li class="chapter-item expanded "><a href="19.html"><strong aria-hidden="true">19.</strong> ORD 19: 岩船の埋没地点</a></li><li class="chapter-item expanded "><a href="20.html"><strong aria-hidden="true">20.</strong> ORD 20: 牟田の海蝕洞</a></li><li class="chapter-item expanded "><a href="memo.html"><strong aria-hidden="true">21.</strong> メモ</a></li></ol>
-            </div>
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
             </div>
         </nav>
 
-        <!-- Track and set sidebar scroll position -->
-        <script>
-            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
-            sidebarScrollbox.addEventListener('click', function(e) {
-                if (e.target.tagName === 'A') {
-                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
-                }
-            }, { passive: true });
-            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
-            sessionStorage.removeItem('sidebar-scroll');
-            if (sidebarScrollTop) {
-                // preserve sidebar scroll position when navigating via links within sidebar
-                sidebarScrollbox.scrollTop = sidebarScrollTop;
-            } else {
-                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
-                var activeSection = document.querySelector('#sidebar .active');
-                if (activeSection) {
-                    activeSection.scrollIntoView({ block: 'center' });
-                }
-            }
-        </script>
-
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
@@ -179,7 +158,7 @@
 <li><a href="#1975%E5%B9%B4%E6%98%AD%E5%92%8C50%E5%B9%B4">1975年(昭和50年)</a></li>
 <li><a href="#%E7%8F%BE%E5%9C%A8">現在</a></li>
 </ul>
-<p>潮流の変化によって砂浜の砂が流出し、砂浜が消えるという現象が問題となっているらしい。陸地が少なくなったり、生態系に影響があるという。脇本・折口海岸一帯では、逆に砂が流入しているという。堤防や岩船は埋まり、砂浜から水面への傾斜が大きくなっている。</p>
+<p>多くの場所で、潮流の変化によって砂浜の砂が流出し、砂浜が消えるという現象が問題となっているらしい。陸地が少なくなったり、生態系に影響があるという。しかし脇本・折口海岸一帯では、逆に砂が流入しているという。かつての堤防や岩石は埋まり、砂浜から水面への傾斜が大きくなっている。</p>
 <h2 id="撮影年不明"><a class="header" href="#撮影年不明">撮影年不明</a></h2>
 <p><img src="./images/20240814iwafune.jpg" alt="image" />
 <em><a href="https://www.city.akune.lg.jp/soshikikarasagasu/somuka/hishokohogakari/5/1023.html">阿久根七不思議／阿久根市</a>の画像から</em></p>
@@ -187,7 +166,7 @@
 <h2 id="1975年昭和50年"><a class="header" href="#1975年昭和50年">1975年(昭和50年)</a></h2>
 <p><img src="./images/20240915beach1.png" alt="image" />
 <em>阿久根市誌p1122(昭和50年)から。本の撮影時に歪みがある</em></p>
-<p>↑次に古い画像。陸側から撮影しているため、阿久根市ホームページの画像とは左右反転している。突端に面影を感じる。完全に体感だが高さが半分くらいになったように見える。</p>
+<p>↑次に古い画像。陸側から撮影しているため、阿久根市ホームページの画像とは左右反転している。突端に面影を感じる。縮尺がわからないので完全に体感だが高さが半分くらいになったように見える。</p>
 <h2 id="現在"><a class="header" href="#現在">現在</a></h2>
 <p><img src="./images/20240915beach1.jpg" alt="image" />
 <em>埋まっていると思われる付近。黄色で囲った小さなコンクリートは堤防。2020-08撮影</em></p>

@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="ja" class="light" dir="ltr">
+<html lang="ja" class="light sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -8,7 +8,7 @@
 
 
         <!-- Custom HTML head -->
-        
+
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
@@ -31,15 +31,17 @@
 
         <!-- Custom theme stylesheets -->
 
-    </head>
-    <body class="sidebar-visible no-js">
-    <div id="body-container">
+
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
-
+        <!-- Start loading toc.js asap -->
+        <script src="toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
             try {
@@ -61,19 +63,16 @@
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
+            const html = document.documentElement;
             html.classList.remove('light')
             html.classList.add(theme);
-            var body = document.querySelector('body');
-            body.classList.remove('no-js')
-            body.classList.add('js');
+            html.classList.add("js");
         </script>
 
         <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var body = document.querySelector('body');
             var sidebar = null;
             var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
@@ -83,45 +82,25 @@
                 sidebar = 'hidden';
             }
             sidebar_toggle.checked = sidebar === 'visible';
-            body.classList.remove('sidebar-visible');
-            body.classList.add("sidebar-" + sidebar);
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">この本の概要</a></li><li class="chapter-item expanded affix "><li class="part-title">Summary</li><li class="chapter-item expanded "><a href="1.html"><strong aria-hidden="true">1.</strong> ORD 1: 地域の区分</a></li><li class="chapter-item expanded "><a href="2.html"><strong aria-hidden="true">2.</strong> ORD 2: 折口の干拓を標高図で確認する</a></li><li class="chapter-item expanded "><a href="3.html"><strong aria-hidden="true">3.</strong> ORD 3: 折口の交通の変遷</a></li><li class="chapter-item expanded "><a href="4.html"><strong aria-hidden="true">4.</strong> ORD 4: 折口川</a></li><li class="chapter-item expanded "><a href="5.html"><strong aria-hidden="true">5.</strong> ORD 5: 折口海岸</a></li><li class="chapter-item expanded "><a href="6.html"><strong aria-hidden="true">6.</strong> ORD 6: JR時代の阿久根駅の時刻表</a></li><li class="chapter-item expanded "><a href="7.html"><strong aria-hidden="true">7.</strong> ORD 7: 鍋石を検分する</a></li><li class="chapter-item expanded "><a href="8.html"><strong aria-hidden="true">8.</strong> ORD 8: 折口の名前の由来</a></li><li class="chapter-item expanded "><a href="9.html"><strong aria-hidden="true">9.</strong> ORD 9: 鍋石にある伊勢神社を検分する</a></li><li class="chapter-item expanded "><a href="10.html"><strong aria-hidden="true">10.</strong> ORD 10: 折口海岸の堆積</a></li><li class="chapter-item expanded "><a href="11.html"><strong aria-hidden="true">11.</strong> ORD 11: 岩船</a></li><li class="chapter-item expanded "><a href="12.html"><strong aria-hidden="true">12.</strong> ORD 12: 『阿久根の空襲』</a></li><li class="chapter-item expanded "><a href="13.html"><strong aria-hidden="true">13.</strong> ORD 13: 『出水・阿久根・大口の100年』</a></li><li class="chapter-item expanded "><a href="14.html"><strong aria-hidden="true">14.</strong> ORD 14: 『阿久根の自然』</a></li><li class="chapter-item expanded "><a href="15.html"><strong aria-hidden="true">15.</strong> ORD 15: 旧陣之尾橋</a></li><li class="chapter-item expanded "><a href="16.html"><strong aria-hidden="true">16.</strong> ORD 16: 中津浜海岸沖にある人工物(中津浜ミミミミ)</a></li><li class="chapter-item expanded "><a href="17.html"><strong aria-hidden="true">17.</strong> ORD 17: 中津浜海岸近くにある2つの橋台(中津浜ブリッジブラザーズ)</a></li><li class="chapter-item expanded "><a href="18.html"><strong aria-hidden="true">18.</strong> ORD 18: 『雄飛 創立百周年記念誌 阿久根市立折多小学校』</a></li><li class="chapter-item expanded "><a href="19.html"><strong aria-hidden="true">19.</strong> ORD 19: 岩船の埋没地点</a></li><li class="chapter-item expanded "><a href="20.html"><strong aria-hidden="true">20.</strong> ORD 20: 牟田の海蝕洞</a></li><li class="chapter-item expanded "><a href="memo.html"><strong aria-hidden="true">21.</strong> メモ</a></li></ol>
-            </div>
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
             </div>
         </nav>
 
-        <!-- Track and set sidebar scroll position -->
-        <script>
-            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
-            sidebarScrollbox.addEventListener('click', function(e) {
-                if (e.target.tagName === 'A') {
-                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
-                }
-            }, { passive: true });
-            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
-            sessionStorage.removeItem('sidebar-scroll');
-            if (sidebarScrollTop) {
-                // preserve sidebar scroll position when navigating via links within sidebar
-                sidebarScrollbox.scrollTop = sidebarScrollTop;
-            } else {
-                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
-                var activeSection = document.querySelector('#sidebar .active');
-                if (activeSection) {
-                    activeSection.scrollIntoView({ block: 'center' });
-                }
-            }
-        </script>
-
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
@@ -331,7 +310,7 @@
 <div class="footnote-definition" id="365"><sup class="footnote-definition-label">1</sup>
 <p><a href="https://ja.wikipedia.org/wiki/%E9%B9%BF%E5%85%90%E5%B3%B6%E7%9C%8C%E9%81%93365%E5%8F%B7%E8%84%87%E6%9C%AC%E8%B5%A4%E7%80%AC%E5%B7%9D%E7%B7%9A">鹿児島県道365号脇本赤瀬川線 - Wikipedia</a></p>
 </div>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="ord-4-折口川"><a class="header" href="#ord-4-折口川">ORD 4: 折口川</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ord-4-折口川の概要"><a class="header" href="#ord-4-折口川の概要">ORD 4: 折口川の概要</a></h1>
 <ul>
 <li><a href="4.html#%E6%A6%82%E8%A6%81">概要</a></li>
 </ul>
@@ -341,15 +320,15 @@
 <em><a href="https://geoshape.ex.nii.ac.jp/river/resource/460090/">折口川水系 [460090] 地図 | 国土数値情報河川データセット</a></em></p>
 <p><img src="./images/20240814origuchigawa.jpg" alt="images" />
 <em>2024-08撮影</em></p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="ord-5-折口海岸"><a class="header" href="#ord-5-折口海岸">ORD 5: 折口海岸</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ord-5-折口海岸の概要"><a class="header" href="#ord-5-折口海岸の概要">ORD 5: 折口海岸の概要</a></h1>
 <ul>
 <li><a href="5.html#%E6%A6%82%E8%A6%81">概要</a></li>
 </ul>
 <h2 id="概要-5"><a class="header" href="#概要-5">概要</a></h2>
-<p>連続した砂浜が4キロほどあり、南側の、折口にある部分を折口海岸という。海水浴ができるのは浜の北側で、脇本海岸と呼ばれる。</p>
+<p>連続した砂浜が4キロほどあり、南側の折口にある部分を折口海岸という。海水浴ができるのは浜の北側で、脇本海岸と呼ばれる。</p>
 <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d13798.835576954321!2d130.20203794195072!3d32.064484006953045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzLCsDAzJzQwLjQiTiAxMzDCsDEyJzI0LjIiRQ!5e1!3m2!1sen!2sjp!4v1726367962059!5m2!1sen!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-<p><img src="./images/20240915beach.jpg" alt="images" />
-<em>2022-08 撮影</em></p>
+<p><img src="./images/20241117beach.jpg" alt="images" />
+<em>2022~2024年 撮影</em></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ord-6-jr時代の阿久根駅の時刻表"><a class="header" href="#ord-6-jr時代の阿久根駅の時刻表">ORD 6: JR時代の阿久根駅の時刻表</a></h1>
 <ul>
 <li><a href="6.html#%E6%99%82%E5%88%BB%E8%A1%A8">時刻表</a></li>
@@ -384,7 +363,7 @@
 <tr><td>23</td><td></td><td>23</td><td></td></tr>
 <tr><td>0</td><td><strong>46 ドリームつばめ博多</strong></td><td>0</td><td></td></tr>
 </tbody></table>
-</div><div style="break-before: page; page-break-before: always;"></div><h1 id="ord-7-鍋石を検分する"><a class="header" href="#ord-7-鍋石を検分する">ORD 7: 鍋石を検分する</a></h1>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="ord-7-鍋石を観察する"><a class="header" href="#ord-7-鍋石を観察する">ORD 7: 鍋石を観察する</a></h1>
 <ul>
 <li><a href="7.html#%E9%8D%8B%E7%9F%B3">鍋石</a></li>
 </ul>
@@ -429,7 +408,7 @@
 <li><a href="./4.html">ORD 4: 折口川</a></li>
 <li>『阿久根町郷土史』1931年 阿久根町郷土史。</li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="ord-9-鍋石にある伊勢神社を検分する"><a class="header" href="#ord-9-鍋石にある伊勢神社を検分する">ORD 9: 鍋石にある伊勢神社を検分する</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ord-9-鍋石にある伊勢神社を観察する"><a class="header" href="#ord-9-鍋石にある伊勢神社を観察する">ORD 9: 鍋石にある伊勢神社を観察する</a></h1>
 <ul>
 <li><a href="9.html#%E8%AA%BF%E3%81%B9%E3%82%8B">調べる</a></li>
 </ul>
@@ -460,7 +439,7 @@
 <li><a href="10.html#1975%E5%B9%B4%E6%98%AD%E5%92%8C50%E5%B9%B4">1975年(昭和50年)</a></li>
 <li><a href="10.html#%E7%8F%BE%E5%9C%A8">現在</a></li>
 </ul>
-<p>潮流の変化によって砂浜の砂が流出し、砂浜が消えるという現象が問題となっているらしい。陸地が少なくなったり、生態系に影響があるという。脇本・折口海岸一帯では、逆に砂が流入しているという。堤防や岩船は埋まり、砂浜から水面への傾斜が大きくなっている。</p>
+<p>多くの場所で、潮流の変化によって砂浜の砂が流出し、砂浜が消えるという現象が問題となっているらしい。陸地が少なくなったり、生態系に影響があるという。しかし脇本・折口海岸一帯では、逆に砂が流入しているという。かつての堤防や岩石は埋まり、砂浜から水面への傾斜が大きくなっている。</p>
 <h2 id="撮影年不明"><a class="header" href="#撮影年不明">撮影年不明</a></h2>
 <p><img src="./images/20240814iwafune.jpg" alt="image" />
 <em><a href="https://www.city.akune.lg.jp/soshikikarasagasu/somuka/hishokohogakari/5/1023.html">阿久根七不思議／阿久根市</a>の画像から</em></p>
@@ -468,12 +447,12 @@
 <h2 id="1975年昭和50年"><a class="header" href="#1975年昭和50年">1975年(昭和50年)</a></h2>
 <p><img src="./images/20240915beach1.png" alt="image" />
 <em>阿久根市誌p1122(昭和50年)から。本の撮影時に歪みがある</em></p>
-<p>↑次に古い画像。陸側から撮影しているため、阿久根市ホームページの画像とは左右反転している。突端に面影を感じる。完全に体感だが高さが半分くらいになったように見える。</p>
+<p>↑次に古い画像。陸側から撮影しているため、阿久根市ホームページの画像とは左右反転している。突端に面影を感じる。縮尺がわからないので完全に体感だが高さが半分くらいになったように見える。</p>
 <h2 id="現在"><a class="header" href="#現在">現在</a></h2>
 <p><img src="./images/20240915beach1.jpg" alt="image" />
 <em>埋まっていると思われる付近。黄色で囲った小さなコンクリートは堤防。2020-08撮影</em></p>
 <p>今は何もない。少なくとも手で掘れる深さにはなさそうだった。近くにある堤防は、もうふくらはぎくらいの高さしかない。もともとの高さを知らないが、少なくとも1m以上は高くなっていそうだ。</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="ord-11-岩船"><a class="header" href="#ord-11-岩船">ORD 11: 岩船</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ord-11-岩船の概要"><a class="header" href="#ord-11-岩船の概要">ORD 11: 岩船の概要</a></h1>
 <p><img src="./images/20240814iwafune.jpg" alt="image" />
 <em>↑<a href="https://www.city.akune.lg.jp/soshikikarasagasu/somuka/hishokohogakari/5/1023.html">阿久根七不思議／阿久根市</a>の画像から</em></p>
 <p>岩船は、阿久根の伝承として伝えられる大岩である。現在では砂に沈み確認できない。伝説、神社、地名の由来とセットで語られることが多い。</p>
@@ -786,10 +765,12 @@ p195
 多田層を不整合に覆う礫層は丸内層と名付けられている。上限の分布高度は海抜19mで、見える範囲の層厚は3.3mである
 p197
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="ord-15-旧陣之尾橋"><a class="header" href="#ord-15-旧陣之尾橋">ORD 15: 旧陣之尾橋</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ord-15-旧陣之尾橋はどのようなものだったか"><a class="header" href="#ord-15-旧陣之尾橋はどのようなものだったか">ORD 15: 旧陣之尾橋はどのようなものだったか?</a></h1>
 <ul>
-<li><a href="15.html#todo">TODO</a></li>
+<li><a href="15.html#%E6%A6%82%E8%A6%81">概要</a></li>
 </ul>
+<h2 id="概要-6"><a class="header" href="#概要-6">概要</a></h2>
+<p>現在の国道3号線にかかる陣之尾橋とは別の、橋がある。1994年に架けられた橋だが、それ以前は少し離れた位置に橋があった。</p>
 <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="500" height="400" src="https://maps.gsi.go.jp/?hc=hic#17/32.059346/130.227728/&base=ort&ls=ort%7Cgsi-compare-photo&blend=0&disp=11&vs=c1g1j0h0k0l0u0t0z0r0s0m0f1"></iframe>
 <p>↑スライダーを動かして確認できる。</p>
 <p>現橋の基本情報。<a href="https://maps.qchizu.xyz/#18/32.059087/130.229605/&amp;base=pale&amp;ls=pale%7Cmlit_road2019_bridge_01&amp;disp=11&amp;lcd=mlit_road2019_bridge_01&amp;vs=c1g1j0h0k0l0u0t0z0r0s0m0f2&amp;d=m">全国Ｑ地図</a>から。</p>
@@ -805,23 +786,16 @@ p197
 <tr><td>点検実施年度</td><td>H30</td></tr>
 <tr><td>判定区分</td><td>２(予防保全段階)</td></tr>
 <tr><td>Ｑ地図管理ID</td><td>1015250</td></tr>
-<tr><td></td><td></td></tr>
 </tbody></table>
 </div>
 <ul>
-<li>数百メートル下流の国道にかかっている橋も陣之尾橋という</li>
-<li>現橋は旧橋より数十メートル上流に架けられている</li>
-<li>同時にかかっていた時期があったのか、同時に廃止だったのかわからない。位置的には廃止されたか</li>
+<li>同時にかかっていた時期があったのか、同時に廃止だったのかわからない。位置的には新しい橋がかけられたことで廃止されたか</li>
 <li>旧橋の情報は不明</li>
+<li>1950年代の土地改良の後の、直線的な川の位置に架けられているので、そのころに作られたものだろう</li>
 </ul>
-<h2 id="todo"><a class="header" href="#todo">TODO</a></h2>
-<ul>
-<li>現地を確認する</li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="ord-16-中津浜海岸沖にある人工物"><a class="header" href="#ord-16-中津浜海岸沖にある人工物">ORD 16: 中津浜海岸沖にある人工物</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ord-16-中津浜海岸沖にある人工物は何か"><a class="header" href="#ord-16-中津浜海岸沖にある人工物は何か">ORD 16: 中津浜海岸沖にある人工物は何か?</a></h1>
 <ul>
 <li><a href="16.html#%E9%A1%9E%E4%BC%BC">類似</a></li>
-<li><a href="16.html#%E3%83%8D%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0">ネーミング</a></li>
 </ul>
 <p>中津浜海岸沖にある、海中にある四角形の影は何なのだろう。航空写真を合成する都合だと思っていたが、違うようだ。</p>
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1619.6637656714302!2d130.19944936579572!3d32.041757562090766!2m3!1f34.939067266033405!2f0!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x353fcd001b8a2385%3A0x2c45d2b057ee6cd!2z5Lit5rSl5rWc5rW35bK4!5e1!3m2!1sen!2sjp!4v1724163981435!5m2!1sen!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -837,15 +811,12 @@ p197
 <h2 id="類似"><a class="header" href="#類似">類似</a></h2>
 <p>愛宕鼻付近にも、類似した色合いの直線的な影が見える。やはり、港が近い。</p>
 <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d5443.089412942703!2d130.1925874340647!3d32.07553524537287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzLCsDA0JzI5LjkiTiAxMzDCsDExJzM5LjUiRQ!5e1!3m2!1sen!2sjp!4v1726143277096!5m2!1sen!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-<h2 id="ネーミング"><a class="header" href="#ネーミング">ネーミング</a></h2>
-<p>これを、「中津浜ミミミミ」と呼ぶことにする。形がそんな感じだから。</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="ord-17-中津浜海岸近くにある2つの橋台"><a class="header" href="#ord-17-中津浜海岸近くにある2つの橋台">ORD 17: 中津浜海岸近くにある2つの橋台</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ord-17-中津浜海岸近くにある2つの橋台は何か"><a class="header" href="#ord-17-中津浜海岸近くにある2つの橋台は何か">ORD 17: 中津浜海岸近くにある2つの橋台は何か?</a></h1>
 <ul>
 <li><a href="17.html#%E6%A6%82%E8%A6%81">概要</a></li>
-<li><a href="17.html#%E3%83%8D%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0">ネーミング</a></li>
 <li><a href="17.html#%E9%96%A2%E9%80%A3">関連</a></li>
 </ul>
-<h2 id="概要-6"><a class="header" href="#概要-6">概要</a></h2>
+<h2 id="概要-7"><a class="header" href="#概要-7">概要</a></h2>
 <ul>
 <li>肥薩おれんじ鉄道の高架がある</li>
 <li>橋台が2つあり、片方にしか橋が架けられていない</li>
@@ -862,8 +833,6 @@ p197
 <p>国土地理院の衛星写真で比較すると、ずれていて、1970年代だと右の位置にあるように見える。ただ、このへんの航空写真は道路や海岸付近など、全体的に右にずれているようだ。地図の歪みの可能性が高い。</p>
 <p>ということで航空写真での確認はできていないが、橋の前後で隣に一線敷設できる空間は確かにあるようだ。</p>
 <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="500" height="400" src="https://maps.gsi.go.jp/?hc=hic#18/32.03848/130.203974/&base=ort&ls=ort&disp=1&vs=c1g1j0h0k0l0u0t0z0r0s0m1f1&ls2=ort%7Cgsi-compare-photo&blend2=0&disp2=11"></iframe>
-<h2 id="ネーミング-1"><a class="header" href="#ネーミング-1">ネーミング</a></h2>
-<p>この場所を、橋台(きょうだい)が2つにかけて、「中津浜ブリッジブラザーズ」と呼ぶことにした。</p>
 <h2 id="関連-3"><a class="header" href="#関連-3">関連</a></h2>
 <p>なし。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="ord-18-雄飛-創立百周年記念誌-阿久根市立折多小学校"><a class="header" href="#ord-18-雄飛-創立百周年記念誌-阿久根市立折多小学校">ORD 18: 『雄飛 創立百周年記念誌 阿久根市立折多小学校』</a></h1>
@@ -929,8 +898,8 @@ p29
 <li><a href="./5.html">ORD 5: 折口海岸</a></li>
 <li><a href="./11.html">ORD 11: 岩船</a></li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="ord-20-牟田の海蝕洞"><a class="header" href="#ord-20-牟田の海蝕洞">ORD 20: 牟田の海蝕洞</a></h1>
-<h2 id="概要-7"><a class="header" href="#概要-7">概要</a></h2>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ord-20-牟田の海蝕洞を観察する"><a class="header" href="#ord-20-牟田の海蝕洞を観察する">ORD 20: 牟田の海蝕洞を観察する</a></h1>
+<h2 id="概要-8"><a class="header" href="#概要-8">概要</a></h2>
 <p>牟田の海岸に、海蝕洞がある。周囲と隔絶された雄大な秘境を感じられる。</p>
 <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4359.17030981828!2d130.20197707650064!3d32.05140697397536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzLCsDAzJzA1LjEiTiAxMzDCsDEyJzE2LjQiRQ!5e1!3m2!1sen!2sjp!4v1726397405859!5m2!1sen!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 <h2 id="アクセス"><a class="header" href="#アクセス">アクセス</a></h2>
@@ -959,6 +928,54 @@ p29
 <p>数メートルを海に隔てられた2つの陸地が見えるが、距離以上に遠い。上部の斜面を渡りきるか泳がないとたどり着けない。</p>
 <h2 id="関連-5"><a class="header" href="#関連-5">関連</a></h2>
 <p>なし。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ord-21-田島橋はなぜカーブしているのか"><a class="header" href="#ord-21-田島橋はなぜカーブしているのか">ORD 21: 田島橋はなぜカーブしているのか?</a></h1>
+<h2 id="概要-9"><a class="header" href="#概要-9">概要</a></h2>
+<p>田島橋は、折口にかかる橋である。</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d4508.324744097074!2d130.2080890898374!3d32.062657906854824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzLCsDAzJzQ1LjYiTiAxMzDCsDEyJzQ2LjciRQ!5e1!3m2!1sen!2sjp!4v1731816267661!5m2!1sen!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<h2 id="カーブ"><a class="header" href="#カーブ">カーブ</a></h2>
+<p>航空写真だとわかりにくいが、橋はややカーブしている。</p>
+<p><img src="./images/20241117bridgeview.png" alt="image" />
+<em>Googleストリートビューより</em></p>
+<p><img src="./images/20241117bridge.jpg" alt="image" />
+<em>2024年8月撮影。西に向けて撮影した</em></p>
+<h2 id="疑問"><a class="header" href="#疑問">疑問</a></h2>
+<p>カーブするには、それなりの理由があるはずである。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ord-22-折多小学校前の歩道帯はなぜ幅が広いのか"><a class="header" href="#ord-22-折多小学校前の歩道帯はなぜ幅が広いのか">ORD 22: 折多小学校前の歩道帯はなぜ幅が広いのか?</a></h1>
+<h2 id="概要-10"><a class="header" href="#概要-10">概要</a></h2>
+<p>折多小学校前の前の歩道帯は、広く取られている。緑化部分も合わせると、隣の国道3号線の道路と同じくらいの幅がある。</p>
+<p>また、校門前はスロープと階段で構成されている。広いスペースまで直線の階段1つでいいように見えるが、このスタイルになっているのはなぜなのだろうか。</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1127.115475496906!2d130.2219852759452!3d32.05987499417875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzLCsDAzJzM1LjYiTiAxMzDCsDEzJzIzLjUiRQ!5e1!3m2!1sen!2sjp!4v1731819008008!5m2!1sen!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<p><img src="./images/20241117road.png" alt="images" />
+<em>2024年のGoogleストリートビューから</em></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ord-23-校門の比較をすると面白そう"><a class="header" href="#ord-23-校門の比較をすると面白そう">ORD 23: 校門の比較をすると面白そう</a></h1>
+<h2 id="概要-11"><a class="header" href="#概要-11">概要</a></h2>
+<p>多くの公立学校の校舎は、コンクリート造の同じような形をしている。</p>
+<p>しかし校門に関しては、同じ市内であっても統一された様式がなく、学校によってまちまちであることに気づいた。地域で最長級の歴史をもつ学校の顔として、誇りを持って迎えているように見える。</p>
+<p>比較してみると面白そうだ。</p>
+<h2 id="関連-6"><a class="header" href="#関連-6">関連</a></h2>
+<ul>
+<li><a href="./22.html">ORD 22</a>で、比較していて気づいた</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ord-24-岩船神社を古写真で比較する"><a class="header" href="#ord-24-岩船神社を古写真で比較する">ORD 24: 岩船神社を古写真で比較する</a></h1>
+<h2 id="概要-12"><a class="header" href="#概要-12">概要</a></h2>
+<p>岩船神社の鳥居と社殿を写した古い写真がある。現在は、鳥居の向こう側は森が迫っていて、同じアングルで撮ることはできない。</p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d835.1626247987099!2d130.20838651746124!3d32.06163475930198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x353fcc8b0ce3bf8f%3A0x8798b82f08e2255d!2sIwafune%20Shrine!5e1!3m2!1sen!2sjp!4v1731826335810!5m2!1sen!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<p><img src="./images/20241117shrinebefore.jpg" alt="images" />
+<em>阿久根市誌より</em></p>
+<ul>
+<li>↑</li>
+<li>白黒写真でよくわからないが、もともとは白色だった? 現在は黒色に見える。コンクリート製の鳥居の表面は傷みが目立った。海風のためか、侵食が激しいように見える</li>
+<li>木々が少なく、空が広く見える</li>
+<li>鳥居の後ろに転がっている材木?は何なのだろう</li>
+</ul>
+<p><img src="./images/20241117shrineafter.jpg" alt="images" />
+<em>2022年ごろ撮影</em></p>
+<ul>
+<li>↑</li>
+<li>現在の鳥居には「昭和42年9月再建」とあった。古写真に写っている鳥居と同じだろう</li>
+</ul>
+<p><img src="./images/20241117tori.jpg" alt="images" />
+<em>2020年ごろ撮影</em></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="メモ-4"><a class="header" href="#メモ-4">メモ</a></h1>
 <p>阿久根市折口</p>
 <h2 id="人口"><a class="header" href="#人口">人口</a></h2>
