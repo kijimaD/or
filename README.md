@@ -15,7 +15,7 @@ $ ./scripts/entry.sh
 
 ```
 <figure>
-  内容...
-  <figcaption>説明...</figcaption>
+  <img src="..." width="600">
+  <figcaption>...</figcaption>
 </figure>
 ```

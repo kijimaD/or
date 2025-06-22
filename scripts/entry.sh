@@ -27,7 +27,7 @@ filename="./${timestamp}_${new_number}.md"
 
 # ファイル作成
 touch "$filename"
-echo "# OR $new_number: xx" >> "$filename"
+echo "# ORD $new_number: xx" >> "$filename"
 cat tmpl.md >> "$filename"
 
 echo "- [ORD $new_number: xx](./$filename)" >> SUMMARY.md
