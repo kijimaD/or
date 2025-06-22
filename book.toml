@@ -5,6 +5,9 @@ multilingual = false
 src = "src"
 title = "📜 ORiguchi Documents"
 
+[output.html]
+additional-css = ["mdbook.css"]
+
 [preprocessor.toc]
 command = "mdbook-toc"
 renderer = ["html"]
