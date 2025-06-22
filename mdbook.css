@@ -14,14 +14,13 @@
 
 figure {
   display: table;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 figcaption {
   caption-side: bottom;
-  display: table-caption;
   font: italic smaller sans-serif;
   text-align: center;
   padding: 4px;
-  color: var(--bs-secondary);
-  border: 1px solid var(--bs-secondary);
+  color: var(--bs-dark);
 }
