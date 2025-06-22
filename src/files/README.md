@@ -4,4 +4,5 @@
 - <20240820kyoryo.pdf> `橋梁資料` https://www.nakanihon.co.jp/gijyutsu/Shimada/BridgeData/f46KG.pdf
 - <20240820mamorou.pdf> `生活排水対策パンフレット` https://www.city-kirishima.jp/kankyo/kurashi/kankyo/suishitsuhozen/documents/minnnademamorouutukusiikawayaumi.pdf
 - <20240820tochibunrui.pdf> `土地分類基本調査` https://nlftp.mlit.go.jp/kokjo/tochimizu/F3/data/pdf/4622t.pdf
+- <20250622master4syo.pdf> `マスタープラン第4章` https://www.city.akune.lg.jp/material/files/group/91/masterplan_dai4syo.pdf
 - <20250622third.pdf> `九州新幹線建設における並行在来線問題の政治過程-八代-川内間の経営分離をめぐって-` https://hokkyodai.repo.nii.ac.jp/record/5503/files/56-1-zinbun-03.pdf
