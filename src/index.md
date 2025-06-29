@@ -56,3 +56,11 @@ ORDは[鹿児島県阿久根市](https://maps.app.goo.gl/PvxRiVGu2V33KGfZ8)、�
 - 『阿久根の空襲』
 - 『雄飛 創立百周年記念誌 阿久根市立折多小学校』
 - [土地改良増加生産量調査報告書 昭和33年度 \(農林水産統計報告\) \- 国立国会図書館デジタルコレクション](https://dl.ndl.go.jp/pid/2455983/1/124)
+- [国道図](https://www.digital.archives.go.jp/DAS/pickup/view/category/categoryArchives/0600000000/0605040000/01)
+  - [本州、四国、九州 一](https://www.digital.archives.go.jp/DAS/pickup/view/detail/detailArchives/0605040000/0000000744/01)
+- [元禄国絵図](https://www.digital.archives.go.jp/DAS/pickup/view/category/categoryArchives/0300000000/default/01)
+  - [薩摩国（元禄）](https://www.digital.archives.go.jp/DAS/pickup/view/detail/detailArchives/0301000000/0000000231/01)
+- [天保国絵図](https://www.digital.archives.go.jp/DAS/pickup/view/category/categoryArchives/0300000000/0303000000_8/01)
+  - [薩摩国](https://www.digital.archives.go.jp/DAS/pickup/view/detail/detailArchives/0303000000_8/0000000319/01)
+- [官板実測日本地図](https://www.digital.archives.go.jp/DAS/pickup/view/category/categoryArchives/0600000000/0605020000/01)
+  - [（二）山陰、山陽、南海、西海](https://www.digital.archives.go.jp/DAS/pickup/view/detail/detailArchives/0605020000/0000000738/01)

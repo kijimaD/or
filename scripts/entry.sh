@@ -30,4 +30,4 @@ touch "$filename"
 echo "# ORD $new_number: xx" >> "$filename"
 cat tmpl.md >> "$filename"
 
-echo "- [ORD $new_number: xx](./$filename)" >> SUMMARY.md
+echo "- [ORD $new_number: xx]($filename)" >> SUMMARY.md
