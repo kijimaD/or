@@ -3,8 +3,7 @@
 実行する。
 
 ```shell
-docker build . -t or
-docker run -d -v "$PWD/":/work -w /work -p 3002:3002 --name or-server --restart always or bash -c "mdbook serve -p 3002 -n 0.0.0.0"
+docker compose up -d
 ```
 
 ## 作成規約

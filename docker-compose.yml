@@ -1,0 +1,13 @@
+services:
+  or-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: or-server
+    ports:
+      - "3002:3002"
+    volumes:
+      - ./:/work
+    working_dir: /work
+    restart: always
+    command: bash -c "mdbook serve -p 3002 -n 0.0.0.0"
