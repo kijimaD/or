@@ -2,12 +2,14 @@ services:
   or-server:
     build:
       context: .
-      dockerfile: Dockerfile
+      target: app
     container_name: or-server
     ports:
-      - "3002:3002"
+      - "8008:3000"
     volumes:
       - ./:/work
     working_dir: /work
     restart: always
-    command: bash -c "mdbook serve -p 3002 -n 0.0.0.0"
+    command: bash -c "mdbook serve -p 3000 -n 0.0.0.0"
+    labels:
+      description: "郷土資料"
