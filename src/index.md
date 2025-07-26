@@ -64,3 +64,4 @@ ORDは[鹿児島県阿久根市](https://maps.app.goo.gl/PvxRiVGu2V33KGfZ8)、�
   - [薩摩国](https://www.digital.archives.go.jp/DAS/pickup/view/detail/detailArchives/0303000000_8/0000000319/01)
 - [官板実測日本地図](https://www.digital.archives.go.jp/DAS/pickup/view/category/categoryArchives/0600000000/0605020000/01)
   - [（二）山陰、山陽、南海、西海](https://www.digital.archives.go.jp/DAS/pickup/view/detail/detailArchives/0605020000/0000000738/01)
+- [MAPPLE法務局地図ビューア](https://labs.mapple.com/mapplexml.html#16/34.693122/135.194165)
