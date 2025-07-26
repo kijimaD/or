@@ -38,6 +38,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc.js"></script>
@@ -94,10 +95,13 @@
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';
+                sidebar_toggle.checked = false;
             }
-            sidebar_toggle.checked = sidebar === 'visible';
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
@@ -148,7 +152,12 @@
 
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                        <div class="search-wrapper">
+                            <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <i class="fa fa-spinner fa-spin"></i>
+                            </div>
+                        </div>
                     </form>
                     <div id="searchresults-outer" class="searchresults-outer hidden">
                         <div id="searchresults-header" class="searchresults-header"></div>
@@ -245,6 +254,7 @@
 <li><a href="https://www.digital.archives.go.jp/DAS/pickup/view/detail/detailArchives/0605020000/0000000738/01">（二）山陰、山陽、南海、西海</a></li>
 </ul>
 </li>
+<li><a href="https://labs.mapple.com/mapplexml.html#16/34.693122/135.194165">MAPPLE法務局地図ビューア</a></li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="or-1-地域の区分を見る"><a class="header" href="#or-1-地域の区分を見る">OR 1: 地域の区分を見る</a></h1>
 <ul>
@@ -1343,6 +1353,83 @@ p29
 </ul>
 <h2 id="関連-17"><a class="header" href="#関連-17">関連</a></h2>
 <!-- 関連するエントリやリンクを記載する -->
+<p>なし。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ord-36-折多小学校の小道の変遷を見る"><a class="header" href="#ord-36-折多小学校の小道の変遷を見る">ORD 36: 折多小学校の小道の変遷を見る</a></h1>
+<ul>
+<li><a href="202507180841_36.html#%E6%A6%82%E8%A6%81">概要</a>
+<ul>
+<li><a href="202507180841_36.html#%E7%9B%B4%E7%B7%9A%E7%9A%84%E9%81%93%E8%B7%AF">直線的道路</a></li>
+<li><a href="202507180841_36.html#%E6%A0%A1%E5%BA%AD%E6%8B%A1%E5%BC%B5">校庭拡張</a></li>
+<li><a href="202507180841_36.html#%E6%96%B0%E8%A8%AD">新設</a></li>
+</ul>
+</li>
+<li><a href="202507180841_36.html#%E9%96%A2%E9%80%A3">関連</a></li>
+</ul>
+<h2 id="概要-19"><a class="header" href="#概要-19">概要</a></h2>
+<p>細い道がある。</p>
+<h3 id="直線的道路"><a class="header" href="#直線的道路">直線的道路</a></h3>
+<ul>
+<li>多田方面に向かう少ない道の1つである</li>
+<li>直線的に、折口方面の道につながっていた</li>
+<li>折多学校は今より南の位置にあった</li>
+<li>現在の県道はなく、田だけがある</li>
+</ul>
+<h3 id="校庭拡張"><a class="header" href="#校庭拡張">校庭拡張</a></h3>
+<ul>
+<li>校庭拡張によって、曲がった。現在の道と同じ形になったように見える。</li>
+</ul>
+<h3 id="新設"><a class="header" href="#新設">新設</a></h3>
+<ul>
+<li>少し北に直線的な県道が整備され、そちらが主要な道路になる。</li>
+</ul>
+<h2 id="関連-18"><a class="header" href="#関連-18">関連</a></h2>
+<!-- 関連するエントリやリンクを記載する -->
+<p>なし。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ord-37-折多小学校前の国道の工事前後を比較する"><a class="header" href="#ord-37-折多小学校前の国道の工事前後を比較する">ORD 37: 折多小学校前の国道の工事前後を比較する</a></h1>
+<ul>
+<li><a href="202507210906_37.html#%E6%A6%82%E8%A6%81">概要</a></li>
+<li><a href="202507210906_37.html#%E9%96%A2%E9%80%A3">関連</a></li>
+</ul>
+<h2 id="概要-20"><a class="header" href="#概要-20">概要</a></h2>
+<!-- 概要を書く -->
+<p><a href="./202501010027_27.html">ORD 27: 折多小学校前の線形改良を比較する</a>で変化が存在してそうなことを確認した。より比較しやすい空中写真を見つけたので、確認する。</p>
+<p>前。</p>
+<figure>
+  <img src="./images/20250723before.png" width="600">
+  <figcaption><a href="https://service.gsi.go.jp/map-photos/app/map?search=photo&id=549914&search_date_from=0000&search_date_to=9999&color_type_ids=1%2C2&scale_from=0&scale_to=99999999&lon_min=130.1639211330115&lon_max=130.2781679429854&lat_min=32.04938125948773&lat_max=32.0778762056587#14/32.057457317/130.228417333">国土地理院の空中写真</a>を加工した 1963年</figcaption>
+</figure>
+<p>後。</p>
+<figure>
+  <img src="./images/20250723after.png" width="600">
+  <figcaption><a href="https://service.gsi.go.jp/map-photos/app/map?search=photo&id=570074&search_date_from=0000&search_date_to=9999&color_type_ids=1%2C2&scale_from=0&scale_to=99999999&lon_min=130.1639211330115&lon_max=130.2781679429854&lat_min=32.04938125948773&lat_max=32.0778762056587#14/32.06953941100001/130.235333076">国土地理院の空中写真</a>を加工した 1968年</figcaption>
+</figure>
+<ul>
+<li>工事直後であり、付け替え前の痕跡が明確に見える。ちょうど道路一本分ほど上に移動している</li>
+<li>工事は1963年~1968年に行われた</li>
+<li>画像には含まれていないが、周辺の道路の線形も改良されている。現在でも周辺に不自然に広い歩道として残っている</li>
+<li>左下の森はなくなっている。同時に造成されて平坦になったように見える</li>
+<li>左下に体育館ができている</li>
+</ul>
+<h2 id="関連-19"><a class="header" href="#関連-19">関連</a></h2>
+<!-- 関連するエントリやリンクを記載する -->
+<ul>
+<li><a href="./202501010027_27.html">ORD 27: 折多小学校前の線形改良を比較する</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ord-38-折多小学校の地番を見る"><a class="header" href="#ord-38-折多小学校の地番を見る">ORD 38: 折多小学校の地番を見る</a></h1>
+<ul>
+<li><a href="202507260851_38.html#%E6%A6%82%E8%A6%81">概要</a></li>
+<li><a href="202507260851_38.html#%E9%96%A2%E9%80%A3">関連</a></li>
+</ul>
+<h2 id="概要-21"><a class="header" href="#概要-21">概要</a></h2>
+<!-- 概要を書く -->
+<p>地番図で折多小学校の校庭を見ると、2つの字で構成されることがわかる。</p>
+<p>左側は、岩掛(1670台)。右側は、清水(4360台)。</p>
+<p>字は、自然地形によって分けられることが多い。これは、もともと校庭の右半分はほかと同様に低く、造成して平坦にしたことを示しているように見える。</p>
+<h2 id="関連-20"><a class="header" href="#関連-20">関連</a></h2>
+<!-- 関連するエントリやリンクを記載する -->
+<ul>
+<li><a href="./202507180841_36.html">ORD 36: 折多小学校の小道の変遷を見る</a>。道の変遷とつながっている</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="メモ-4"><a class="header" href="#メモ-4">メモ</a></h1>
 <p>阿久根市折口</p>
 <h2 id="人口"><a class="header" href="#人口">人口</a></h2>
@@ -1578,6 +1665,7 @@ p29
             window.setTimeout(window.print, 100);
         });
         </script>
+
 
     </div>
     </body>
